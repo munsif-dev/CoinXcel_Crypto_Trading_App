@@ -1,10 +1,8 @@
 package com.munsif.CoinXcel.Model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.munsif.CoinXcel.Domain.USER_ROLE;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Generated;
 import org.springframework.boot.SpringApplication;
@@ -20,6 +18,9 @@ public class User {
     private String email;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String Password;
+    @Embedded
+    private TwoFactorAuth twoFactorAuth= new TwoFactorAuth();
+    private USER_ROLE role = USER_ROLE.COSTUMER;
 
-    private USER_ROLE role =
+
 }
