@@ -8,7 +8,10 @@ import lombok.Generated;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.SpringApplication;
-@Data
+
+
+@Getter
+@Setter
 @Entity
 public class User {
     @Id
@@ -23,27 +26,4 @@ public class User {
     private USER_ROLE role = USER_ROLE.COSTUMER;
 
 
-    public String getEmail() {
-        return email;
-    }
-
-    public String getFullname() {
-        return fullname;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }
