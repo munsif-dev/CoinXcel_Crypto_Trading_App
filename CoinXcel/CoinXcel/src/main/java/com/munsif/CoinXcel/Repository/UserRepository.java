@@ -1,7 +1,8 @@
 package com.munsif.CoinXcel.Repository;
 
 import com.munsif.CoinXcel.Model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends jpaRepository<User, Long> {
+public interface UserRepository extends  JpaRepository<User, Long> {
 
 }
